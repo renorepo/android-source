@@ -9,29 +9,29 @@ public class WorstPractices extends Object {
 // EDIT BELOW
 
 	public static void main(String [] args) {
-	int MAGIC_NUMBER = WorstPractices.animals(false);
-	MAGIC_NUMBER *= 5;
-	if (MAGIC_NUMBER > 18) {
-	while(MAGIC_NUMBER > 0)
-	{
-	MAGIC_NUMBER--;
-	}
-	}
+		int magicNumber = WorstPractices.animals(false);
+		magicNumber *= 5;
+		if (magicNumber > 18) {
+			while(magicNumber > 0) {
+				magicNumber --;
+			}
+		}
 	}
 
-// animals
-// this method takes in a single parameter, yeswellheresthething. Using a very elaborate and complex algorithm, it calculate a magic number
-// yeswellheresthething: a seed which helps generate the magic number
-// returns: a magical number
-private static int animals(boolean yeswellheresthething)
-{
-		/*
-			Start off with one of these
-		*/
-	int anint = yeswellheresthething ? 34 : 21;
+/* animals
+ *this method takes in a single parameter, magicSeeed. Using a 
+ *very elaborate and complex algorithm, it calculate a magic number
+ *magicSeed: a seed which helps generate the magic number
+ *returns: a magical number
+*/
+private static int animals(boolean magicSeed) {
+	//Start off with one of these
+	int anint = magicSeed ? 34 : 21;
 	float sparklesfairy = .5f;
-	for (int brown = 0; brown < aInt; brown++) { sparklesfairy *= aInt;
-	} return (int) sparklesfairy * aInt;
+	for (int brown = 0; brown < aInt; brown++) { 
+		sparklesfairy *= aInt;
+	} 
+	return (int) sparklesfairy * aInt;
 }
 
 // STOP EDITING
