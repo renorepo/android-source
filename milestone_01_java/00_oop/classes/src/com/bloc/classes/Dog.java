@@ -1,4 +1,5 @@
 package com.bloc.classes;
+import java.util.Arrays;
 
 class Dog {
     // The length of hair which
@@ -23,12 +24,15 @@ class Dog {
 	String mColor;
 
 	// ADD MEMBER VARIABLES HERE IF NECESSARY
-
+	String[] mSizes = {'tiny', 'small', 'average', 'large'};
 	/*
 	 * getHairLength
 	 * @return this Dog's hair length
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	float getHairLength() {
+		return mHairLength;
+	}
 
 	/*
 	 * setHairLength
@@ -37,13 +41,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setHairLength(float inches) {
+		mHairLength = inches;
+	}
 	/*
 	 * getGender
 	 * @return this Dog's gender
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	String getGender() {
+		return mGender;
+	}
 	/*
 	 * setGender
 	 * Sets this Dog's gender
@@ -51,13 +59,21 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setGender(hoohooHaha) {
+		if(hoohooHaha == "male" || hoohooHaha == "female") {
+			mGender = hoohooHaha;
+		} else {
+			System.print.ln("If your dog is spayed or neutered it is still 'male' or 'female'.");
+		}
+	}
 	/*
 	 * getSize
 	 * @return the size of the dog
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	String getSize() {
+		return mSize;
+	}
 	/*
 	 * setSize
 	 * Sets the size of the Dog
@@ -65,13 +81,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setSize(String adjective) {
+		mSize = adjective;
+	}
 	/*
 	 * getAge
 	 * @return this Dog's age
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	int getAge() {
+		return mAge;
+	}
 	/*
 	 * setAge
 	 * Sets the age of the Dog
@@ -79,13 +99,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setAge(int years) {
+		mAge = years;
+	}
 	/*
 	 * getWeight
 	 * @return this Dog's weight
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	float getWeight() {
+		return mWeight;
+	}
 	/*
 	 * setWeight
 	 * Sets the weight of the Dog
@@ -93,13 +117,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setWeight(float pounds) {
+		mWeight = pounds;
+	}
 	/*
 	 * getColor
 	 * @return this Dog's color
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	String getColor() {
+		return mColor;
+	}
 	/*
 	 * setColor
 	 * Sets the color of the Dog
@@ -107,7 +135,9 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setColor(String color) {
+		mColor = color;
+	}
 	/*
 	 * feed
 	 * Side-effect: 1. The Dog gains weight, specifically WEIGHT_GAIN
@@ -117,7 +147,15 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	String feed(numberOfMeals) {
+		growth = Meals/3
+		sizeIndex = ArrayUtils.indexOf(mSizes, mSize);
+		if (growth + sizeIndex.length) {
+			return mSize = mSizes[growth + sizeIndex];
+		} else {
+			return mSize = mSizes[mSizes.length -1];
+		}
+	}
 	/*
 	 * play
 	 * Side-effect: 1. The Dog loses weight, specifically WEIGHT_LOSS
