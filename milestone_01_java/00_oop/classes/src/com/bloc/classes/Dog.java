@@ -24,7 +24,10 @@ class Dog {
 	String mColor;
 
 	// ADD MEMBER VARIABLES HERE IF NECESSARY
-	String[] mSizes = {'tiny', 'small', 'average', 'large'};
+	// Track meals fed to dog instance
+	int mFed;
+	// Track times played in dog instance
+	int mPlayed;
 	/*
 	 * getHairLength
 	 * @return this Dog's hair length
@@ -59,11 +62,9 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-	void setGender(hoohooHaha) {
-		if(hoohooHaha == "male" || hoohooHaha == "female") {
-			mGender = hoohooHaha;
-		} else {
-			System.print.ln("If your dog is spayed or neutered it is still 'male' or 'female'.");
+	void setGender(String gender) {
+		if(gender == "male" || gender == "female") {
+			mGender = gender;
 		}
 	}
 	/*
@@ -147,13 +148,23 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-	String feed(numberOfMeals) {
-		growth = Meals/3
-		sizeIndex = ArrayUtils.indexOf(mSizes, mSize);
-		if (growth + sizeIndex.length) {
-			return mSize = mSizes[growth + sizeIndex];
-		} else {
-			return mSize = mSizes[mSizes.length -1];
+	void feed() {
+		mFed += 1;
+		mWeight += WEIGHT_GAIN;
+		if(mFed ==  3 && mSize != "large"){
+			mFed = 0;
+			switch(mSize) {
+				case "tiny":
+					mSize = "small";
+					break;
+				case "small":
+					mSize = "average";
+					break;
+				case "average":
+					mSize = "large";
+					break;
+			}
+
 		}
 	}
 	/*
@@ -165,6 +176,26 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void play() {
+		mPlayed += 1;
+		if (mWeight > MIN_WEIGHT){
+			mWeight -= WEIGHT_LOSS;
+		}
+		if (mPlayed == 6 & mSize != "tiny") {
+			mPlayed = 0;
+			switch(mSize) {
+				case "small":
+					mSize = "tiny";
+					break;
+				case "average":
+					mSize = "small";
+					break;
+				case "large":
+					mSize = "average";
+					break;
+			}	
+		}
+	} 
 
 	/*
 	 * cutHair
@@ -173,5 +204,9 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void cutHair() {
+		if (mHairLength > 0) {
+			mHairLength -= HAIR_CUT_LENGTH;
+		}
+	}
 }
