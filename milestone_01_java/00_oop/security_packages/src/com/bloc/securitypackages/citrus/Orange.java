@@ -1,4 +1,5 @@
 package com.bloc.securitypackages.citrus;
+import com.bloc.securitypackages.Fruit;
 
 class Orange extends Fruit {
 	Orange() {

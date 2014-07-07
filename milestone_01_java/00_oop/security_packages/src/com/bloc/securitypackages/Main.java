@@ -3,9 +3,9 @@ package com.bloc.securitypackages;
 // YOUR IMPORTS GO HERE
 // import com.bloc.{your_package};
 
-import com.bloc.securitypackages.colors;
-import com.bloc.securitypackages.apples;
-import com.bloc.securitypackages.citrus;
+import com.bloc.securitypackages.colors.*;
+import com.bloc.securitypackages.citrus.*;
+import com.bloc.securitypackages.apples.*;
 
 //com.bloc.securitypackages.colors.Orange orangeTheColor = new com.bloc.securitypackages.colors.Orange();
 //com.bloc.securitypackages.citrus.Orange orangeTheCitrus = new com.bloc.securitypackages.citrus.Orange();

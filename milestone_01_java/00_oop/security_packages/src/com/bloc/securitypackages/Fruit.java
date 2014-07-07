@@ -1,5 +1,7 @@
 package com.bloc.securitypackages;
 
+import com.bloc.securitypackages.colors.*;
+
 public abstract class Fruit extends Object {
 	// The name of the fruit
 	private String mName;
@@ -42,7 +44,7 @@ public abstract class Fruit extends Object {
 		mName = name;
 	}
 
-	int getCalories() {
+	public int getCalories() {
 		return mCalories;
 	}
 
@@ -58,11 +60,11 @@ public abstract class Fruit extends Object {
 		mColor = color;
 	}
 
-	double getWeight() {
+	public double getWeight() {
 		return mWeight;
 	}
 
-	private void setWeight(double weight) {
+	public void setWeight(double weight) {
 		mWeight = weight;
 	}
 }
