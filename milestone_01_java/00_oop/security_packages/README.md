@@ -5,9 +5,9 @@ Open your command prompt and `cd` into this README's directory (security_package
 After you've finished, compile your code by running the following command:
 
 ``` bash
-$ javac -d bin src/com/bloc/securitypackages/*/*.java src/com/bloc/securitypackages/*.java
-```
+$ javac -d bin -classpath src/com/bloc/securitypackages/*/*.java src/com/bloc/securitypackages/*.java
 
+"javac -d bin/ -classpath libs/test_jar.jar src/com/bloc/classes/*.java" 
 After it compiles successfully, `cd` into the bin directory:
 
 ``` bash
