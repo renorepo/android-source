@@ -13,14 +13,11 @@ class Ensemble extends Object {
 	 * @param artists variable length artists
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+	
+    
+
 	Ensemble() {
-		mArtists = new Artist[2];
-		mArtists[0] = new Artist("Robert", "Plant");
-		mArtists[1] = new Artist("Jimmy",  "Page");
-		mName = "Led Zepplin";
-	}
-	Ensemble(Artist[] artists) {
-		mArtists = artists;
+		this(new Artist[] {new Artist("Robert", "Plant"), new Artist("Jimmy", "Page")});
 	}
 
 	/*
@@ -33,11 +30,20 @@ class Ensemble extends Object {
 	 * @param artists variable length artists
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+
+	Ensemble(Artist[] artists) {
+		this(null, artists);	
+	}
+
 	Ensemble(String name, Artist[] artists) {
-		System.out.println(name);
-		if (name == null) {
+		if(name == null) {
 			Artist artist = artists[0];
 			mName = artist.getFirstName() + artist.getLastName();
+			mArtists = artists;
+		}
+		else {
+			mName = name;
+			mArtists = artists;
 		}
 	}
 }

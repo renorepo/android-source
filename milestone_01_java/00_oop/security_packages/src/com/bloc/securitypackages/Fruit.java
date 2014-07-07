@@ -34,7 +34,7 @@ public abstract class Fruit extends Object {
 		this.mWeight = weight;
 	}
 
-	private String getName() {
+	public String getName() {
 		return mName;
 	}
 
@@ -50,7 +50,7 @@ public abstract class Fruit extends Object {
 		mCalories = calories;
 	}
 
-	private Color getColor() {
+	public Color getColor() {
 		return mColor;
 	}
 
