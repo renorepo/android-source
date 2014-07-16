@@ -16,7 +16,8 @@ public class Main extends Object {
 
 		// Accomplish the below using polymorphism
 
-		for (Pet p: pets) {
+		for (Pet p: pets
+			) {
 			p.feed();
 			p.wash();
 			p.exercise();
