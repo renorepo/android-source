@@ -6,34 +6,22 @@ public class Main extends Object {
 
 	public static void main(String [] args) {
 
-		Dog dog = new Dog();
-		Cat cat = new Cat();
-		Bird bird = new Bird();
-		Snake snake = new Snake();
-		Tarantula tarantula = new Tarantula();
+		Pet dog = new Dog();
+		Pet cat = new Cat();
+		Pet bird = new Bird();
+		Pet snake = new Snake();
+		Pet tarantula = new Tarantula();
+
+		Pet[] pets = {dog, cat, bird, snake, tarantula};
 
 		// Accomplish the below using polymorphism
 
-		dog.feed();
-		dog.wash();
-		dog.exercise();
-
-		cat.feed();
-		cat.wash();
-		cat.exercise();
-
-		bird.feed();
-		bird.wash();
-		bird.exercise();
-
-		snake.feed();
-		snake.wash();
-		snake.exercise();
-
-		tarantula.feed();
-		tarantula.wash();
-		tarantula.exercise();
-
+		for (Pet p: pets) {
+			p.feed();
+			p.wash();
+			p.exercise();
+		}
+		
 		// Accomplish the above using polymorphism
 
 		assert dog.isFed() && dog.isWashed() && dog.isExercised() : "Your dog needs a little more attention";
