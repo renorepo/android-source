@@ -27,7 +27,7 @@ public class FavoritePastries {
 
 	public FavoritePastries() {
 		// WORK HERE
-		mPastryMap = new HashMap<Traitor, String>();
+		mPastryMap = new HashMap<Pastry, Integer>();
 	}
 
 	/* 
@@ -64,7 +64,7 @@ public class FavoritePastries {
 			mPastryMap.remove(pastry);
 			return true;
 		}
-		else
+		else {
 			return false;
 		}
 	}
@@ -85,8 +85,8 @@ public class FavoritePastries {
 		if (mPastryMap.containsKey(pastry)) {
 			return mPastryMap.get(pastry);
 		}
-		else
-			return -1
+		else {
+			return -1;
 		}
 	}
 
@@ -105,9 +105,9 @@ public class FavoritePastries {
 	 *         found
 	 */
 	public Collection<Pastry> getPastriesForRating(int rating) {
+		ArrayList<Pastry> valueList = new ArrayList<Pastry>();
 		if (mPastryMap.containsValue(rating)) {
-			private ArrayList<Pastry> valueList;
-			for(Entry<Pastry, Integer> e : mPastryMap.entrySet()) {
+			for(Map.Entry<Pastry, Integer> e : mPastryMap.entrySet()) {
 				Pastry key = e.getKey();
 				Integer value = e.getValue();
 				if (value == rating) {
@@ -115,8 +115,6 @@ public class FavoritePastries {
 				}
 			}
 		}
-		else
-			return null;
-		}
+		return valueList;
 	}
 }
