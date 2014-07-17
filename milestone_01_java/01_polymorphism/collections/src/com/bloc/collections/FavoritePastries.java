@@ -18,6 +18,7 @@ import java.util.*;
  * A pastry may not have duplicate entries
  */
 public class FavoritePastries {
+	private HashMap<Pastry, Integer> mPastryMap;
 
 	/*
 	 * Use a HashMap to store the relationship
@@ -26,6 +27,7 @@ public class FavoritePastries {
 
 	public FavoritePastries() {
 		// WORK HERE
+		mPastryMap = new HashMap<Traitor, String>();
 	}
 
 	/* 
@@ -43,6 +45,7 @@ public class FavoritePastries {
 	 */
 	public void addPastry(Pastry pastry, int rating) {
 		// WORK HERE
+		mPastryMap.put(pastry, rating);
 	}
 
 	/*
@@ -57,7 +60,13 @@ public class FavoritePastries {
 	 */
 	public boolean removePastry(Pastry pastry) {
 		// WORK HERE
-		return false;
+		if (mPastryMap.containsKey(pastry)) {
+			mPastryMap.remove(pastry);
+			return true;
+		}
+		else
+			return false;
+		}
 	}
 
 	/*
@@ -73,8 +82,12 @@ public class FavoritePastries {
 	 *		   -1 if not found among FavoritePastries
 	 */
 	public int getRatingForPastry(Pastry pastry) {
-		// WORK HERE
-		return -1;
+		if (mPastryMap.containsKey(pastry)) {
+			return mPastryMap.get(pastry);
+		}
+		else
+			return -1
+		}
 	}
 
 	/*
@@ -92,8 +105,18 @@ public class FavoritePastries {
 	 *         found
 	 */
 	public Collection<Pastry> getPastriesForRating(int rating) {
-		// WORK HERE
-		return null;
+		if (mPastryMap.containsValue(rating)) {
+			private ArrayList<Pastry> valueList;
+			for(Entry<Pastry, Integer> e : mPastryMap.entrySet()) {
+				Pastry key = e.getKey();
+				Integer value = e.getValue();
+				if (value == rating) {
+					valueList.add(key);
+				}
+			}
+		}
+		else
+			return null;
+		}
 	}
-
 }
